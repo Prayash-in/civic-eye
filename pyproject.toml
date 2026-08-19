@@ -1,0 +1,22 @@
+[project]
+name = "civic-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Prayash-in", email = "prayash.in@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "google-genai>=2.18.1",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.3",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+civic-ai = "civic_ai:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"

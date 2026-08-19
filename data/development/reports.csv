@@ -1,0 +1,60 @@
+id,image,description,category,issue_type,severity,latitude,longitude
+POT-001,POT_001.jpeg,Road surface has numerous potholes and broken patches along a long stretch.,road,pothole,high,26.138406,91.763154
+POT-002,POT_002.jpeg,A localized pothole is visible in the road surface with loose broken asphalt around it.,road,pothole,medium,26.19487,91.69944
+POT-003,POT_003.jpeg,"Several water-filled potholes are visible across the lane, making the road surface uneven.",road,pothole,medium,26.155776,91.713791
+POT-005,POT_005.jpeg,A deep pothole with a broken edge is visible on the active roadway.,road,pothole,medium,26.176518,91.720438
+POT-006,POT_006.jpeg,A moderate pothole is visible near the edge of the residential road.,road,pothole,medium,26.182677,91.754835
+POT-007,POT_007.jpeg,"A deep, wide pothole is visible on a wet roadway beside moving traffic.",road,pothole,high,26.129998,91.681635
+POT-009,POT_009.jpeg,Large water-filled potholes have damaged a section of the roadway.,road,pothole,high,26.199015,91.778244
+POT-010,POT_010.jpeg,Several shallow potholes and patched areas are visible across the road surface.,road,pothole,medium,26.18581,91.818981
+BD-001,BD_001.jpeg,An open roadside drain contains a large accumulation of garbage and debris.,drainage,blocked_drain,high,26.180264,91.698329
+BD-002,BD_002.jpeg,Leaves and organic debris are covering the drain grate and restricting the opening.,drainage,blocked_drain,medium,26.165294,91.812225
+BD-003,BD_003.jpeg,The drain grate is heavily covered with leaves and small debris.,drainage,blocked_drain,medium,26.126268,91.73109
+BD-004,BD_004.jpeg,Water is standing around a partially obstructed roadside drain opening.,drainage,blocked_drain,medium,26.172044,91.701816
+BD-006,BD_006.jpeg,Garbage and debris are lodged inside a small roadside drain inlet.,drainage,blocked_drain,medium,26.146035,91.668758
+BD-007,BD_007.jpeg,Standing water is visible at a drain grate with debris around the opening.,drainage,blocked_drain,medium,26.194117,91.701809
+BD-008,BD_008.jpeg,"Drain grates and loose debris are scattered beside the drainage channel, obstructing the inlet area.",drainage,blocked_drain,medium,26.13483,91.780014
+BD-010,BD_010.jpeg,Leaves and debris are covering a curbside drainage opening.,drainage,blocked_drain,low,26.114449,91.783013
+BD-011,BD_011.jpeg,A drainage opening is filled with accumulated waste while a worker is clearing the obstruction.,drainage,blocked_drain,high,26.128104,91.740973
+OD-001,OD_001.jpeg,A long uncovered drainage channel runs through a dense roadside area.,drainage,open_drain,high,26.188691,91.73921
+OD-002,OD_002.jpeg,A deep open drain beside the pavement has broken and displaced concrete slabs.,drainage,open_drain,high,26.127642,91.812008
+OD-004,OD_004.jpeg,An open drainage channel carries water beside a commercial roadside area.,drainage,open_drain,high,26.108415,91.667935
+OD-005,OD_005.jpeg,A long uncovered drain runs alongside a residential street.,drainage,open_drain,medium,26.198818,91.675729
+OD-006,OD_006.jpeg,An uncovered concrete drain contains visible garbage and stagnant water.,drainage,open_drain,medium,26.130604,91.81896
+OD-008,OD_008.jpeg,A deep uncovered drain runs directly beside a pedestrian walkway.,drainage,open_drain,critical,26.179269,91.782845
+OD-009,OD_009.jpeg,An uncovered roadside drain carries water beside a paved pedestrian area.,drainage,open_drain,low,26.107479,91.677437
+OD-010,OD_010.jpeg,A narrow open drain is visible along the edge of a roadside walkway.,drainage,open_drain,medium,26.128728,91.744463
+GO-002,GO_002.jpeg,A waste container is surrounded by a large amount of accumulated garbage.,waste_management,garbage_overflow,medium,26.178593,91.734336
+GO-004,GO_004.jpeg,Plastic and household waste is overflowing around a roadside garbage bin.,waste_management,garbage_overflow,medium,26.128435,91.726548
+GO-005,GO_005.jpeg,A small amount of waste is spilling over the rim of a garbage bin.,waste_management,garbage_overflow,low,26.135308,91.708072
+GO-006,GO_006.jpeg,Loose garbage is scattered around a public waste bin.,waste_management,garbage_overflow,low,26.202359,91.69825
+GO-007,GO_007.jpeg,Several bags of garbage are piled beside a row of waste containers.,waste_management,garbage_overflow,medium,26.152259,91.738289
+GO-008,GO_008.jpeg,Garbage bags are overflowing beside a roadside bin and extending onto the road edge.,waste_management,garbage_overflow,high,26.137592,91.686156
+GO-009,GO_009.jpeg,A large amount of waste is accumulated around a public garbage container.,waste_management,garbage_overflow,medium,26.167005,91.715245
+GO-010,GO_010.jpeg,Multiple waste containers are surrounded by a substantial pile of uncollected garbage.,waste_management,garbage_overflow,medium,26.188822,91.774085
+IDP-001,IDP_001.jpeg,A large pile of discarded waste has been deposited in an area marked with a no-dumping sign.,waste_management,illegal_dumping,medium,26.187165,91.730611
+IDP-003,IDP_003.jpeg,Mixed household waste has been dumped in an open area beside vegetation.,waste_management,illegal_dumping,medium,26.145034,91.802074
+IDP-004,IDP_004.jpeg,A large accumulation of dumped waste is spread across an open roadside area.,waste_management,illegal_dumping,high,26.204366,91.690101
+IDP-006,IDP_006.jpeg,A substantial pile of mixed waste has been deposited along an open roadside area.,waste_management,illegal_dumping,medium,26.149611,91.733715
+IDP-007,IDP_007.jpeg,A very large pile of waste has been dumped in an open area and is being handled by heavy equipment.,waste_management,illegal_dumping,high,26.184128,91.803364
+IDP-008,IDP_008.jpeg,A large pile of mixed waste has been deposited in an open area.,waste_management,illegal_dumping,high,26.123346,91.796442
+IDP-009,IDP_009.jpeg,Construction and household debris has been piled along the roadside near a property boundary.,waste_management,illegal_dumping,medium,26.156034,91.778914
+SL-001,SL_001.jpeg,Several streetlight fixtures on the pole appear damaged or incomplete.,electricity,broken_streetlight,medium,26.148795,91.709705
+SL-002,SL_002.jpeg,The streetlight fixture has a visibly damaged or broken lamp housing.,electricity,broken_streetlight,medium,26.204904,91.776306
+SL-005,SL_005.jpeg,The streetlight lantern has broken glass panels around the lamp.,electricity,broken_streetlight,low,26.124778,91.816773
+SL-006,SL_006.jpeg,The streetlight fixture and mounting base show visible deterioration and damage.,electricity,broken_streetlight,medium,26.18766,91.692205
+SL-007,SL_007.jpeg,The streetlight fixture has broken or missing protective glass.,electricity,broken_streetlight,medium,26.112115,91.725189
+WL-001,WL_001.jpeg,A strong jet of water is escaping from roadside water infrastructure onto the street.,water,water_leakage,high,26.16723,91.78447
+WL-002,WL_002.jpeg,Water is spraying forcefully from a damaged roadside pipe onto the roadway.,water,water_leakage,high,26.116598,91.742475
+WL-004,WL_004.jpeg,A large volume of water is escaping onto the roadway and surrounding pavement.,water,water_leakage,medium,26.107626,91.746273
+WL-006,WL_006.jpeg,Several streams of water are escaping from the roadway and spreading across the lane.,water,water_leakage,medium,26.128543,91.719262
+WL-007,WL_007.jpeg,Water is flowing forcefully from a damaged pipe or outlet and spreading across the road.,water,water_leakage,high,26.123861,91.704498
+WL-008,WL_008.jpeg,Water is leaking from the road surface and forming a broad wet area across the lane.,water,water_leakage,low,26.124614,91.78052
+WL-009,WL_009.jpeg,Water is flowing across the roadway from a visible leak near the curb.,water,water_leakage,medium,26.11298,91.753935
+WL-010,WL_010.jpeg,Pressurized water is escaping from a damaged roadside pipe and spreading over the pavement.,water,water_leakage,medium,26.18516,91.811267
+DR-001,DR_001.jpeg,"The road surface has extensive cracks, broken patches and widespread deterioration along the roadway.",road,damaged_road,high,26.144516,91.736237
+DR-002,DR_002.jpeg,"A severely damaged and waterlogged section of the road is affecting vehicles and pedestrians.",road,damaged_road,high,26.115804,91.708574
+DR-003,DR_003.jpeg,"A large section of the roadway has broken pavement, exposed material and severe surface deterioration.",road,damaged_road,high,26.180600,91.753900
+DR-004,DR_004.jpeg,"The road surface is badly deteriorated with loose material, broken sections and uneven patches.",road,damaged_road,high,26.147129,91.735551
+DR-006,DR_006.jpeg,"The roadway has widespread cracks, broken patches and multiple severely deteriorated sections.",road,damaged_road,high,26.166131,91.743798
+DR-007,DR_007.jpeg,"A large section of the road is severely damaged with extensive loose material, broken pavement and surface deterioration.",road,damaged_road,high,26.123463,91.779617

@@ -1,0 +1,16 @@
+id,image,description,category,issue_type,severity,latitude,longitude
+POT-008,POT_008.jpeg,"Small localized potholes are visible on an otherwise usable road surface.",road,pothole,low,26.105786,91.707689
+POT-004,POT_004.jpeg,"A large pothole and broken road section are visible on a busy urban road.",road,pothole,high,26.166131,91.743798
+DR-005,DR_005.jpg,"A heavily deteriorated road surface contains multiple uneven and water-filled damaged sections.",road,damaged_road,medium,26.193000,91.691000
+BD-005,BD_005.jpeg,"Dry leaves are collected over the drain grate, reducing the visible opening.",drainage,blocked_drain,low,26.126235,91.701455
+BD-009,BD_009.jpeg,"Water is backing up and spilling forcefully from a roadside drain opening.",drainage,blocked_drain,high,26.108218,91.758762
+OD-003,OD_003.jpeg,"A large uncovered drain is immediately beside a busy roadway with moving traffic.",drainage,open_drain,critical,26.182821,91.725707
+OD-007,OD_007.jpeg,"A narrow open drainage channel runs beside vegetation and a roadside boundary.",drainage,open_drain,low,26.190256,91.805951
+GO-003,GO_003.jpeg,"Garbage is scattered around a collection bin, with waste extending onto the ground.",waste_management,garbage_overflow,low,26.175840,91.688595
+GO-001,GO_001.jpeg,"Garbage is piled above the rim of multiple bins and is spilling onto the surrounding area.",waste_management,garbage_overflow,high,26.194802,91.695132
+IDP-005,IDP_005.jpeg,"A small scattered amount of waste has been left on otherwise open land.",waste_management,illegal_dumping,low,26.106635,91.726251
+IDP-002,IDP_002.jpeg,"A very large quantity of mixed waste has been dumped across an open area.",waste_management,illegal_dumping,high,26.116252,91.761417
+SL-003,SL_003.jpeg,"The streetlight lamp housing is visibly damaged and incomplete.",electricity,broken_streetlight,low,26.143093,91.771931
+SL-004,SL_004.jpeg,"A streetlight pole has fallen onto the roadside grass area.",electricity,broken_streetlight,high,26.180038,91.722943
+WL-005,WL_005.jpeg,"Water is pooling and bubbling through a paved surface near the road edge.",water,water_leakage,low,26.187430,91.744914
+WL-003,WL_003.jpeg,"A major burst of water is spraying onto a city street from a damaged water line.",water,water_leakage,critical,26.123463,91.779617

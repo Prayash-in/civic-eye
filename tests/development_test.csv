@@ -1,0 +1,11 @@
+id,image,description,expected_issue_type,expected_severity
+POT-001,POT_001.jpeg,"Road surface has numerous potholes and broken patches along a long stretch.",pothole,high
+POT-002,POT_002.jpeg,"A localized pothole is visible in the road surface with loose broken asphalt around it.",pothole,medium
+BD-001,BD_001.jpeg,"An open roadside drain contains a large accumulation of garbage and debris.",blocked_drain,high
+BD-004,BD_004.jpeg,"Water is standing around a partially obstructed roadside drain opening.",blocked_drain,medium
+OD-001,OD_001.jpeg,"A long uncovered drainage channel runs through a dense roadside area.",open_drain,high
+GO-002,GO_002.jpeg,"A waste container is surrounded by a large amount of accumulated garbage.",garbage_overflow,medium
+IDP-001,IDP_001.jpeg,"A large pile of discarded waste has been deposited in an area marked with a no-dumping sign.",illegal_dumping,medium
+SL-001,SL_001.jpeg,"Several streetlight fixtures on the pole appear damaged or incomplete.",broken_streetlight,medium
+WL-001,WL_001.jpeg,"A strong jet of water is escaping from roadside water infrastructure onto the street.",water_leakage,high
+DR-001,DR_001.jpeg,"The road surface is heavily cracked and deteriorated across a broad section.",damaged_road,high
