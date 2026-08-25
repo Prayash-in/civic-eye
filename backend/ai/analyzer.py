@@ -1,5 +1,6 @@
 import base64
 import json
+import os
 import re
 from pathlib import Path
 from enum import Enum
@@ -12,8 +13,14 @@ from pydantic import BaseModel, Field, ValidationError
 # Configuration
 # ============================================================
 
-LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"
-MODEL = "qwen/qwen3-vl-4b"
+LM_STUDIO_URL = os.getenv(
+    "LM_STUDIO_URL",
+    "http://localhost:1234/v1/chat/completions",
+)
+MODEL = os.getenv(
+    "LM_STUDIO_MODEL",
+    "qwen/qwen3-vl-4b",
+)
 
 REQUEST_TIMEOUT = 180
 

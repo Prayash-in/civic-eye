@@ -10,3 +10,11 @@ wheels/
 .venv
 
 .env
+
+# Civic AI application data
+data/uploads/
+*.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/

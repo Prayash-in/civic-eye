@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "verified_at": "2026-08-22",
+    "assembly_term": "2026-2031 (16th Assam Legislative Assembly, results declared 2026-05-04 by the Election Commission of India)",
+    "lok_sabha_term": "18th Lok Sabha (elected 2024, term 2024-2029)",
+    "sources": {
+      "lok_sabha": [
+        "PRS India MP Track — https://prsindia.org/mptrack/18-lok-sabha/bijuli-kalita-medhi (Guwahati, term start 09-06-2024, in office)",
+        "PRS India MP Track — https://prsindia.org/mptrack/17-lok-sabha/dilip-saikia and 18th Lok Sabha results: Darrang-Udalguri (formerly Mangaldoi) — Dilip Saikia (BJP) re-elected 2024-06-04 (sources: Sentinel Assam 2024-06-05, Wikipedia Darrang-Udalguri rev 2026-08-16)",
+        "Wikipedia — Guwahati Lok Sabha constituency (revision 1369785978) and Darrang-Udalguri Lok Sabha constituency (revision 2026-08-16, assembly segments 31,32,43,44,45,46,47,48,49,50,51)",
+        "ECI delimitation notification 2023: Mangaldoi renamed Darrang-Udalguri"
+      ],
+      "assembly": [
+        "ECI Results 2026 — https://results.eci.gov.in/ResultAcGenMay2026/candidateswise-S0349.htm (Sipajhar AC-49) and S0350.htm (Mangaldai AC-50)",
+        "India Today — Mangaldai 2026: BJP Nilima Devi wins 100078 votes vs Rijumoni Talukdar (published 2026-05-03/04)",
+        "Times of India — Mangaldai 2026, Sipajhar 2026, Dalgaon 2026 result pages (2026-05-04)",
+        "NDTV/News18 — Sipajhar 2026 Paramananda Rajbongshi 99720 votes, Dalgaon 2026 Mazibur Rahman 147555 votes",
+        "Indian Express — Dalgaon/Mangaldai 2026 winners",
+        "Wikipedia — Mangaldai Assembly constituency, Sipajhar details, 2026 Assam Legislative Assembly election revision 1366764718"
+      ]
+    },
+    "notes": [
+      "MLA/MP information is informational and location-based only. Representatives listed here are NOT the resolving authorities for civic issues unless explicitly stated elsewhere.",
+      "Assembly segment numbering follows the current post-delimitation (2023) Assam electoral roll. Mangaldai is AC-50 (SC) in Darrang district; Darrang-Udalguri is the post-delimitation successor to Mangaldoi Lok Sabha.",
+      "Sipajhar AC numbers vary by delimitation (pre-2023 No.66 vs post-2023 No.49); stored here as AS-049 per current Lok Sabha segment list. Dalgaon is AS-051.",
+      "No personal contact details are stored by design.",
+      "Guwahati data retained for demo diversity; Mangaldai/Darrang-Udalguri added for the August 2026 Mangaldai presentation. All verified 2026-08-22."
+    ]
+  },
+  "assembly": {
+    "AS-027": {
+      "constituency": "Chamaria",
+      "representative": "Rekibuddin Ahmed",
+      "party": "Indian National Congress",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-028": {
+      "constituency": "Boko-Chaygaon",
+      "representative": "Raju Mesh",
+      "party": "Bharatiya Janata Party",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-029": {
+      "constituency": "Palasbari",
+      "representative": "Himangshu Shekhar Baishya",
+      "party": "Bharatiya Janata Party",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-033": {
+      "constituency": "Dispur",
+      "representative": "Pradyut Bordoloi",
+      "party": "Bharatiya Janata Party",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-034": {
+      "constituency": "Dimoria",
+      "representative": "Tapan Das",
+      "party": "Asom Gana Parishad",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-035": {
+      "constituency": "New Guwahati",
+      "representative": "Diplu Ranjan Sarmah",
+      "party": "Bharatiya Janata Party",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-036": {
+      "constituency": "Guwahati Central",
+      "representative": "Vijay Kumar Gupta",
+      "party": "Bharatiya Janata Party",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-037": {
+      "constituency": "Jalukbari",
+      "representative": "Himanta Biswa Sarma",
+      "party": "Bharatiya Janata Party",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-013": {
+      "constituency": "Goalpara West",
+      "representative": "Pabitra Rabha",
+      "party": "Bharatiya Janata Party",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-015": {
+      "constituency": "Dudhnai",
+      "representative": "Tankeswar Rabha",
+      "party": "Bharatiya Janata Party",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-049": {
+      "constituency": "Sipajhar",
+      "representative": "Paramananda Rajbongshi",
+      "party": "Bharatiya Janata Party",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-050": {
+      "constituency": "Mangaldai",
+      "representative": "Nilima Devi",
+      "party": "Bharatiya Janata Party",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    },
+    "AS-051": {
+      "constituency": "Dalgaon",
+      "representative": "Mazibur Rahman",
+      "party": "All India United Democratic Front",
+      "elected_year": 2026,
+      "term_start": "2026",
+      "term_end": "2031"
+    }
+  },
+  "lok_sabha": {
+    "GUWAHATI": {
+      "name": "Guwahati",
+      "representative": "Bijuli Kalita Medhi",
+      "party": "Bharatiya Janata Party",
+      "term": "18th Lok Sabha",
+      "term_start": "2024-06-09",
+      "elected_year": 2024
+    },
+    "DARRANG_UDALGURI": {
+      "name": "Darrang-Udalguri",
+      "alias": "Mangaldai",
+      "representative": "Dilip Saikia",
+      "party": "Bharatiya Janata Party",
+      "term": "18th Lok Sabha",
+      "term_start": "2024-06-04",
+      "elected_year": 2024
+    }
+  }
+}

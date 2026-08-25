@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "verified_at": "2026-08-22",
+    "notes": [
+      "Boundary polygons for the five Kamrup Metropolitan assembly segments and for the three Darrang district segments (Sipajhar, Mangaldai, Dalgaon) are APPROXIMATE locality-based coverage areas created for this demo.",
+      "They are NOT official Delimitation Commission boundaries and must be replaced with verified GIS polygon data before production use.",
+      "Segments without polygons are listed without boundaries; the resolver reports 'outside_supported_area' until their boundary data is added.",
+      "The Lok Sabha segments reflect the current post-delimitation composition: Guwahati (10 ACs) and Darrang-Udalguri (11 ACs, renamed from Mangaldoi in ECI delimitation 2023) per Wikipedia and ECI final order 2023, retrieved 2026-08-22.",
+      "Mangaldai town centre (~26.43, 92.03) falls inside the Mangaldai (AS-050) approximate polygon. Sipajhar and Dalgaon polygons are adjacent in Darrang district."
+    ]
+  },
+  "assembly_constituencies": [
+    {
+      "id": "AS-033",
+      "name": "Dispur",
+      "district": "Kamrup Metropolitan",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": "approximate_locality",
+      "boundary": [
+        [91.745, 26.100],
+        [91.815, 26.095],
+        [91.830, 26.140],
+        [91.800, 26.158],
+        [91.740, 26.150]
+      ]
+    },
+    {
+      "id": "AS-034",
+      "name": "Dimoria",
+      "district": "Kamrup Metropolitan",
+      "state": "Assam",
+      "type": "assembly",
+      "reserved": "SC",
+      "boundary_type": "approximate_locality",
+      "boundary": [
+        [91.815, 26.010],
+        [91.950, 25.995],
+        [91.970, 26.090],
+        [91.900, 26.130],
+        [91.810, 26.120],
+        [91.790, 26.065]
+      ]
+    },
+    {
+      "id": "AS-035",
+      "name": "New Guwahati",
+      "district": "Kamrup Metropolitan",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": "approximate_locality",
+      "boundary": [
+        [91.755, 26.170],
+        [91.845, 26.165],
+        [91.870, 26.205],
+        [91.850, 26.235],
+        [91.750, 26.225]
+      ]
+    },
+    {
+      "id": "AS-036",
+      "name": "Guwahati Central",
+      "district": "Kamrup Metropolitan",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": "approximate_locality",
+      "boundary": [
+        [91.725, 26.150],
+        [91.775, 26.145],
+        [91.785, 26.190],
+        [91.730, 26.195]
+      ]
+    },
+    {
+      "id": "AS-037",
+      "name": "Jalukbari",
+      "district": "Kamrup Metropolitan",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": "approximate_locality",
+      "boundary": [
+        [91.615, 26.145],
+        [91.705, 26.135],
+        [91.720, 26.175],
+        [91.700, 26.215],
+        [91.610, 26.200]
+      ]
+    },
+    {
+      "id": "AS-049",
+      "name": "Sipajhar",
+      "district": "Darrang",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": "approximate_locality",
+      "boundary": [
+        [91.92, 26.52],
+        [92.20, 26.52],
+        [92.22, 26.68],
+        [91.92, 26.68]
+      ]
+    },
+    {
+      "id": "AS-050",
+      "name": "Mangaldai",
+      "district": "Darrang",
+      "state": "Assam",
+      "type": "assembly",
+      "reserved": "SC",
+      "boundary_type": "approximate_locality",
+      "boundary": [
+        [91.90, 26.35],
+        [92.15, 26.33],
+        [92.18, 26.53],
+        [91.92, 26.55],
+        [91.90, 26.45]
+      ]
+    },
+    {
+      "id": "AS-051",
+      "name": "Dalgaon",
+      "district": "Darrang",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": "approximate_locality",
+      "boundary": [
+        [91.70, 26.35],
+        [91.92, 26.35],
+        [91.92, 26.55],
+        [91.70, 26.55]
+      ]
+    },
+    {
+      "id": "AS-027",
+      "name": "Chamaria",
+      "district": "Kamrup",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-028",
+      "name": "Boko-Chaygaon",
+      "district": "Kamrup",
+      "state": "Assam",
+      "type": "assembly",
+      "reserved": "ST",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-029",
+      "name": "Palasbari",
+      "district": "Kamrup",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-013",
+      "name": "Goalpara West",
+      "district": "Goalpara",
+      "state": "Assam",
+      "type": "assembly",
+      "reserved": "ST",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-015",
+      "name": "Dudhnai",
+      "district": "Goalpara",
+      "state": "Assam",
+      "type": "assembly",
+      "reserved": "ST",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-031",
+      "name": "Rangiya",
+      "district": "Kamrup",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-032",
+      "name": "Kamalpur",
+      "district": "Kamrup",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-043",
+      "name": "Tamulpur",
+      "district": "Baksa",
+      "state": "Assam",
+      "type": "assembly",
+      "reserved": "ST",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-044",
+      "name": "Goreswar",
+      "district": "Baksa",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-045",
+      "name": "Bhergaon",
+      "district": "Udalguri",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-046",
+      "name": "Udalguri",
+      "district": "Udalguri",
+      "state": "Assam",
+      "type": "assembly",
+      "reserved": "ST",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-047",
+      "name": "Mazbat",
+      "district": "Udalguri",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": null,
+      "boundary": null
+    },
+    {
+      "id": "AS-048",
+      "name": "Tangla",
+      "district": "Udalguri",
+      "state": "Assam",
+      "type": "assembly",
+      "boundary_type": null,
+      "boundary": null
+    }
+  ],
+  "lok_sabha_constituencies": [
+    {
+      "id": "GUWAHATI",
+      "name": "Guwahati",
+      "state": "Assam",
+      "type": "lok_sabha",
+      "assembly_segment_ids": [
+        "AS-013",
+        "AS-015",
+        "AS-027",
+        "AS-028",
+        "AS-029",
+        "AS-033",
+        "AS-034",
+        "AS-035",
+        "AS-036",
+        "AS-037"
+      ],
+      "boundary": null
+    },
+    {
+      "id": "DARRANG_UDALGURI",
+      "name": "Darrang-Udalguri",
+      "alias": "Mangaldai",
+      "state": "Assam",
+      "type": "lok_sabha",
+      "assembly_segment_ids": [
+        "AS-031",
+        "AS-032",
+        "AS-043",
+        "AS-044",
+        "AS-045",
+        "AS-046",
+        "AS-047",
+        "AS-048",
+        "AS-049",
+        "AS-050",
+        "AS-051"
+      ],
+      "boundary": null
+    }
+  ]
+}

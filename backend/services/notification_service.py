@@ -1,0 +1,240 @@
+"""Demo authority notification service.
+
+Sends report notifications ONLY to the demo email addresses configured via
+environment variables (DEMO_NOTIFICATION_EMAIL_1 / DEMO_NOTIFICATION_EMAIL_2).
+Real government officials are never contacted from this application.
+
+States returned:
+- "sent"            -> SMTP accepted the message
+- "failed"          -> sending was attempted and errored (error is sanitized)
+- "not_configured"  -> no demo recipients and/or no SMTP host configured
+- "skipped"         -> caller explicitly disabled notification for this report
+
+The service never raises into the report flow and never exposes credentials.
+"""
+
+import html
+import logging
+import smtplib
+from datetime import datetime, timezone
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from typing import Optional
+
+from backend.config import (
+    APP_BASE_URL,
+    NOTIFICATION_ENABLED,
+    SMTP_FROM_EMAIL,
+    SMTP_HOST,
+    SMTP_PASSWORD,
+    SMTP_PORT,
+    SMTP_USERNAME,
+    demo_recipients,
+)
+
+logger = logging.getLogger(__name__)
+
+SEVERITY_LABELS = {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High Priority",
+    "critical": "CRITICAL",
+}
+
+
+def _esc(value) -> str:
+    return html.escape(str(value if value is not None else ""), quote=True)
+
+
+def _fmt_confidence(confidence: Optional[float]) -> str:
+    if confidence is None:
+        return "Not available"
+    return f"{round(float(confidence) * 100)}%"
+
+
+def _location_label(report, jurisdiction: dict) -> str:
+    """Derive a human-friendly location string from actual jurisdiction, never hardcoded Guwahati."""
+    assembly = jurisdiction.get("assembly_constituency") or {}
+    # Prefer district + assembly, e.g. Mangaldai, Darrang, Assam
+    if assembly.get("name"):
+        name = assembly["name"]
+        district = assembly.get("district")
+        # For Guwahati districts the city name is essentially the assembly area; keep simple
+        if district and district not in name:
+            # Darrang => Mangaldai, Darrang, Assam
+            # Kamrup Metropolitan => e.g. Jalukbari, Kamrup Metropolitan, Assam -> shorten to Guwahati area
+            if district == "Kamrup Metropolitan":
+                return f"{name}, Guwahati, Assam"
+            return f"{name}, {district}, Assam"
+        # Fallback without district
+        if name in ("Mangaldai", "Sipajhar", "Dalgaon"):
+            return f"{name}, Darrang, Assam"
+        return f"{name}, Assam"
+    # Fall back to district alone
+    if assembly.get("district"):
+        return f"{assembly['district']}, Assam"
+    # No jurisdiction — use coordinates context or generic
+    if report.latitude is not None and report.longitude is not None:
+        return f"Assam ({report.latitude:.4f}, {report.longitude:.4f})"
+    return "Location not specified"
+
+
+def build_notification(report, authority_info: dict, jurisdiction: dict) -> dict:
+    """Construct subject + plain-text/HTML bodies for a report."""
+    issue_label = (report.issue_type or "Unclassified Issue").replace("_", " ").title()
+    severity = report.severity or "unknown"
+    severity_label = SEVERITY_LABELS.get(severity, severity.title())
+    report_id = f"CIV-{int(report.id):05d}"
+    report_url = f"{APP_BASE_URL}/reports/{report.id}"
+
+    coords = (
+        f"{report.latitude:.6f}, {report.longitude:.6f}"
+        if report.latitude is not None and report.longitude is not None
+        else "Not available"
+    )
+
+    assembly_name = (jurisdiction.get("assembly_constituency") or {}).get("name")
+    mla = jurisdiction.get("mla")
+    lok_sabha_name = (jurisdiction.get("lok_sabha_constituency") or {}).get("name")
+    mp = jurisdiction.get("mp")
+    location_label = _location_label(report, jurisdiction)
+
+    subject = (
+        f"[Civic Eye] {severity_label} Civic Issue - {issue_label} ({report_id})"
+    )
+
+    text_lines = [
+        "CIVIC EYE - CIVIC ISSUE NOTIFICATION",
+        "*** DEMO NOTIFICATION - not an official government communication ***",
+        "",
+        f"Report ID: {report_id}",
+        f"Detected Issue: {issue_label}",
+        f"Severity: {severity_label}",
+        f"AI Confidence: {_fmt_confidence(report.confidence)}",
+        "",
+        "Description:",
+        report.description or "(none provided)",
+        "",
+        f"Location: {location_label}",
+        f"Coordinates: {coords}",
+        "",
+        f"Responsible Department: {authority_info.get('department') or 'Not available'}",
+        f"Authority: {authority_info.get('authority') or 'Not available'}",
+        "",
+        f"Assembly Constituency: {assembly_name or 'Not available'}",
+        f"MLA (informational): {mla['name'] if mla else 'Not available'}",
+        f"Lok Sabha Constituency: {lok_sabha_name or 'Not available'}",
+        f"MP (informational): {mp['name'] if mp else 'Not available'}",
+        "",
+        f"View report: {report_url}",
+        "",
+        "This message was generated by the Civic Eye demo pipeline and sent to a",
+        "team-controlled demo mailbox. No real government office was contacted.",
+    ]
+
+    rows = [
+        ("Report ID", report_id),
+        ("Detected Issue", issue_label),
+        ("Severity", severity_label),
+        ("AI Confidence", _fmt_confidence(report.confidence)),
+        ("Description", _esc(report.description or "(none provided)")),
+        ("Location", _esc(location_label)),
+        ("Coordinates", _esc(coords)),
+        ("Responsible Department", _esc(authority_info.get("department") or "Not available")),
+        ("Authority", _esc(authority_info.get("authority") or "Not available")),
+        ("Assembly Constituency", _esc(assembly_name or "Not available")),
+        ("MLA (informational)", _esc(mla["name"] if mla else "Not available")),
+        ("Lok Sabha Constituency", _esc(lok_sabha_name or "Not available")),
+        ("MP (informational)", _esc(mp["name"] if mp else "Not available")),
+    ]
+    table_rows = "".join(
+        f'<tr><th style="text-align:left;padding:6px 12px 6px 0;'
+        f'vertical-align:top;white-space:nowrap;">{_esc(label)}:</th>'
+        f"<td style=\"padding:6px 0;\">{value}</td></tr>"
+        for label, value in rows
+    )
+    html_body = f"""\
+<html><body style="font-family:Arial,Helvetica,sans-serif;color:#1a1a1a;">
+  <p style="background:#fff3cd;border:1px solid #e0c568;padding:10px 14px;
+            border-radius:6px;font-weight:bold;">
+    DEMO NOTIFICATION — this is not an official government communication.
+  </p>
+  <h2 style="margin-bottom:4px;">Civic Eye — Civic Issue Notification</h2>
+  <table style="border-collapse:collapse;font-size:14px;">{table_rows}</table>
+  <p style="font-size:13px;">
+    <a href="{_esc(report_url)}">View report</a>
+  </p>
+  <p style="font-size:12px;color:#666;">
+    Generated by the Civic Eye demo pipeline. Sent to team-controlled demo
+    mailboxes only — no real government department has been contacted.
+  </p>
+</body></html>"""
+
+    return {
+        "subject": subject,
+        "text_body": "\n".join(text_lines),
+        "html_body": html_body,
+    }
+
+
+def send_authority_notification(
+    report, authority_info: dict, jurisdiction: dict
+) -> dict:
+    """Send the demo notification. Never raises; returns a status dict."""
+    recipients = demo_recipients()
+
+    if not NOTIFICATION_ENABLED:
+        return {"status": "skipped", "channel": "email", "error": None}
+
+    if not recipients or not SMTP_HOST:
+        missing = []
+        if not recipients:
+            missing.append("demo recipient emails")
+        if not SMTP_HOST:
+            missing.append("SMTP configuration")
+        logger.info(
+            "Notification not configured (missing %s); skipping send.",
+            " and ".join(missing),
+        )
+        return {
+            "status": "not_configured",
+            "channel": "email",
+            "recipients": [],
+            "error": f"Missing {' and '.join(missing)}.",
+        }
+
+    content = build_notification(report, authority_info, jurisdiction)
+
+    message = MIMEMultipart("alternative")
+    message["Subject"] = content["subject"]
+    message["From"] = SMTP_FROM_EMAIL or "civic-ai@localhost"
+    message["To"] = ", ".join(recipients)
+    message.attach(MIMEText(content["text_body"], "plain", "utf-8"))
+    message.attach(MIMEText(content["html_body"], "html", "utf-8"))
+
+    try:
+        with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30) as server:
+            server.starttls()
+            if SMTP_USERNAME and SMTP_PASSWORD:
+                server.login(SMTP_USERNAME, SMTP_PASSWORD)
+            server.sendmail(
+                SMTP_FROM_EMAIL or SMTP_USERNAME or "civic-ai@localhost",
+                recipients,
+                message.as_string(),
+            )
+    except Exception as error:  # noqa: BLE001 - deliberately broad
+        # Sanitized error only — never include credentials in the message.
+        logger.warning("Demo notification failed: %s", type(error).__name__)
+        return {
+            "status": "failed",
+            "channel": "email",
+            "recipients": recipients,
+            "error": f"{type(error).__name__}: email delivery failed.",
+        }
+
+    return {
+        "status": "sent",
+        "channel": "email",
+        "recipients": recipients,
+        "sent_at": datetime.now(timezone.utc).isoformat(),
+    }

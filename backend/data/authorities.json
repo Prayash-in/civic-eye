@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "verified_at": "2026-08-22",
+    "notes": [
+      "This mapping is CONFIGURABLE DEMO DATA. It reflects commonly understood civic responsibilities but has NOT been verified as an official government routing table.",
+      "Authorities vary by jurisdiction: Kamrup Metropolitan reports route to Guwahati Municipal Corporation; Darrang (Mangaldai/Sipajhar/Dalgaon) reports route to Mangaldai Municipal Board and district PHED. The MLA and MP are informational representatives only; they are never set as the resolving authority here.",
+      "Routing is deterministic: issue_type + jurisdiction (district) -> authority/department. No AI determines authorities."
+    ]
+  },
+  "default_authority": {
+    "authority": "Guwahati Municipal Corporation",
+    "department": "General Civic Services"
+  },
+  "district_defaults": {
+    "Kamrup Metropolitan": "Guwahati Municipal Corporation",
+    "Kamrup": "Kamrup District Administration",
+    "Darrang": "Mangaldai Municipal Board",
+    "Udalguri": "Udalguri Municipal Board",
+    "Baksa": "Baksa District Administration",
+    "Goalpara": "Goalpara Municipal Board"
+  },
+  "district_water_authorities": {
+    "Darrang": "Public Health Engineering Dept, Darrang",
+    "Udalguri": "Public Health Engineering Dept, Udalguri",
+    "Kamrup Metropolitan": "Guwahati Jal Board"
+  },
+  "issue_routing": {
+    "pothole": {
+      "department": "Roads & Infrastructure",
+      "authority": "Guwahati Municipal Corporation",
+      "routing_reason": "Road surface damage such as potholes is handled by the municipal roads/infrastructure wing."
+    },
+    "damaged_road": {
+      "department": "Roads & Infrastructure",
+      "authority": "Guwahati Municipal Corporation",
+      "routing_reason": "Deteriorated road surfaces fall under municipal road maintenance."
+    },
+    "garbage_overflow": {
+      "department": "Solid Waste Management",
+      "authority": "Guwahati Municipal Corporation",
+      "routing_reason": "Overflowing collection points are cleared by the municipal solid waste management wing."
+    },
+    "illegal_dumping": {
+      "department": "Solid Waste Management",
+      "authority": "Guwahati Municipal Corporation",
+      "routing_reason": "Waste dumped in unauthorized areas is handled by municipal sanitation enforcement."
+    },
+    "broken_streetlight": {
+      "department": "Street Lighting & Electrical",
+      "authority": "Guwahati Municipal Corporation",
+      "routing_reason": "Streetlight repair is managed by the municipal electrical/street lighting wing."
+    },
+    "water_leakage": {
+      "department": "Water Supply",
+      "authority": "Guwahati Jal Board",
+      "routing_reason": "Leaking water supply infrastructure falls under the city water utility."
+    },
+    "blocked_drain": {
+      "department": "Drainage & Stormwater",
+      "authority": "Guwahati Municipal Corporation",
+      "routing_reason": "Obstructed drains are cleared by the municipal drainage division."
+    },
+    "open_drain": {
+      "department": "Drainage & Stormwater",
+      "authority": "Guwahati Municipal Corporation",
+      "routing_reason": "Open/uncovered drainage channels fall under the municipal drainage division."
+    }
+  }
+}
